@@ -1,0 +1,58 @@
+#menu {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Lato', sans-serif;
+    font-size: 15pt;
+    padding: 1em;
+}
+
+#menu button {
+    border: none;
+    background: none;
+}
+
+#osf {
+    font-size: 30pt; 
+    margin-top: -.15em;
+}
+
+#academy {
+    position: absolute; 
+    top: 2em; 
+    color: #84bc22;
+}
+
+#item1 {
+    margin-right: auto;
+    
+}
+
+#item6 {
+    margin-left: auto;
+}
+
+.options {
+    font-size: 15pt;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    color: black;
+    padding: 1em;
+}
+
+.options:hover {
+    background-color: #262a32;
+    color: white;
+    transition: .5s;
+}
+
+.icons {
+    padding: .75em;
+    height: min-content;
+}
+#dropcontent {
+    display: none;
+}
+#dropdown:hover #dropcontent {
+    display: flex;
+    position: absolute;
+}
