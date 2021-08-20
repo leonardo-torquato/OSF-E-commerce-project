@@ -1,14 +1,33 @@
+body {
+  margin-top: 7rem;
+}
+
+.navbar {
+  border-bottom:1px solid #d1d5d8;
+  margin-bottom: 1em;
+  background-color: white;
+}
+
 .navbar-nav li {
-    margin-right: 1rem;
-    margin-left: 1rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
 }
+
 .navbar-brand {
-    font-weight: bolder;
+  display: inline-flex;
 }
+
+.navbar-brand h1 {
+  align-self: center;
+  color: #011847;
+  font-weight: bold;
+}
+
 div.dropdown-multicol2{
-    width: 45em;
+  width: 45em;
   }
+
 div.dropdown-multicol2>div.dropdown-col{
-    display:inline-block;
-    width: 20%;
+  display:inline-block;
+  width: 20%;
   }
