@@ -25,9 +25,26 @@ body {
 
 div.dropdown-multicol2{
   width: 45em;
-  }
+  background-color: #262a32;
+}
 
 div.dropdown-multicol2>div.dropdown-col{
   display:inline-block;
   width: 20%;
-  }
+}
+
+.dropdown-item, 
+.dropdown-col h3  {
+  color: white;
+}
+
+#summer {
+  color: white;  
+  position: relative; 
+  margin-top: -17rem;
+}
+
+#summer h1 {
+  font-size: 70pt;
+}
+
