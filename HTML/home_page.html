@@ -83,8 +83,10 @@
             <li class="nav-item">
               <a class="nav-link" href="#"><img src="../midia/search.png"></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"><img src="../midia/user.png"></a>
+            <li class="nav-item">              
+              <button type="button" class="btn nav-link" data-bs-toggle="modal" data-bs-target="#login_form">
+                <img src="../midia/user.png">               
+              </button>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#"><img src="../midia/heart.png"></a>
@@ -99,7 +101,7 @@
     <!--/NAVIGATION BAR-->
 
     <!--CAROUSEL-->
-    <div id="carrossel" class="carousel slide container col-8 float-xl-start mx-4" data-bs-ride="carousel">
+    <div id="carrossel" class="carousel slide container col-lg-8 mx-auto float-xl-start" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carrossel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carrossel" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -161,52 +163,122 @@
     
     <!--PRODUCT CARDS-->
     <div class="bg-dark">  
-      <h1 class="display-4 text-center my-5 text-muted">Popular Items</h1>
+
+      <h3 class="pt-5 text-center my-5 text-white">Popular Items</h3>
       
-      <div class="row mx-5">
-        <div class="col-md-4 col-lg-3">
+      <div class="row mx-5 text-center">
+        
+        <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="card mb-3">
             <img class="card-img-top" src="../midia/product1.png">
             <div class="card-body">
-              <h6 class="card-title">Kristina Dam Oak Table With Marble</h6>
-              <p class="card-text"></p>
+              <h6 class="card-title">Kristina Dam Oak Table With</h6>
+              <p class="card-text">$ 799.55</p>
             </div>
           </div>          
         </div>
 
-        <div class="col-md-4 col-lg-3">
+        <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="card mb-3">
             <img class="card-img-top" src="../midia/product2.png">
             <div class="card-body">
-              <h6 class="card-title">Hay - About A Lounge Chair AAL 93</h6>
-              <p class="card-text"></p>
+              <h6 class="card-title">Hay - About A Lounge Chair AAL</h6>
+              <p class="card-text">$ 659.55</p>
             </div>
           </div>            
         </div>
 
-        <div class="col-md-4 col-lg-3">
+        <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="card mb-3">
             <img class="card-img-top" src="../midia/product3.png">
             <div class="card-body">
               <h6 class="card-title">Active Facial Mask and Charcoal</h6>
-              <p class="card-text"></p>
+              <p class="card-text">$ 129.55</p>
             </div>
           </div>          
         </div>
 
-        <div class="col-md-4 col-lg-3">
+        <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="card mb-3">
             <img class="card-img-top" src="../midia/product4.png">
             <div class="card-body">
               <h6 class="card-title">Cocktail Table Walnut | YES</h6>
-              <p class="card-text"></p>
+              <p class="card-text"> $299.99</p>
             </div>
           </div>          
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card mb-3">
+            <img class="card-img-top" src="../midia/product5.png">
+            <div class="card-body">
+              <h6 class="card-title">Hay - About A Lounge Chair AAL</h6>
+              <p class="card-text">$ 659.55</p>
+            </div>
+          </div>          
+        </div>  
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card mb-3">
+            <img class="card-img-top" src="../midia/product6.png">
+            <div class="card-body">
+              <h6 class="card-title">TORY DESK CALENDAR</h6>
+              <p class="card-text">$ 410.99</p>
+            </div>
+          </div>          
+        </div>
+        
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card mb-3">
+            <img class="card-img-top" src="../midia/product7.png">
+            <div class="card-body">
+              <h6 class="card-title">CH445 Wing Chair SUITE NY</h6>
+              <p class="card-text">$ 330.55</p>
+            </div>
+          </div>          
+        </div>  
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card mb-3">
+            <img src="../midia/dragons.png">
+          </div>          
+        </div>  
+        <div>
+          <button type="button" class="btn btn-outline-light rounded-pill col-4">LOAD MORE</button>
         </div>
       </div>
     </div>
     <!--/PRODUCT CARDS-->
     
+    <!--MODAL FORM-->
+    <div class="modal fade" id="login_form" tabindex="-1" aria-labelledby="login_form" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title mx-auto" id="login_form">Sign in</h5>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="Email">Email address</label>
+                <input type="email" class="form-control rounded-pill" id="Email" aria-describedby="email" placeholder="example@mail.com">
+                <small id="passhelp" class="form-text float-end">forgot password</small>
+              </div>
+              <div class="form-group">
+                <label for="Password">Password</label>
+                <input type="password" class="form-control rounded-pill" id="Password" placeholder="Min. of 8 characters, 1 capital letter, 1 special character">
+              </div>            
+            </form>
+          </div>
+          <div class="modal-footer d-block text-center">
+            <button id="loggin-btn" type="submit" class="btn rounded-pill col-6">LOGIN</button>
+            <p>I don't have an account</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/MODAL FORM-->
+
     <!--FOOTER-->
     <!--/FOOTER-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>

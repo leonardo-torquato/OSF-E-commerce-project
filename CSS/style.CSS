@@ -34,17 +34,25 @@ div.dropdown-multicol2>div.dropdown-col{
 }
 
 .dropdown-item, 
-.dropdown-col h3  {
+.dropdown-col h3,
+#loggin-btn,
+#summer {
   color: white;
 }
 
-#summer {
-  color: white;  
+#summer {  
   position: relative; 
   margin-top: -17rem;
 }
 
 #summer h1 {
   font-size: 70pt;
+}
+#loggin-btn {
+  background-color: #84bc22;
+}
+.modal-footer p,
+#passhelp {
+  color: #84bc22;
 }
 
