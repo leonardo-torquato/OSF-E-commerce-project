@@ -1,5 +1,6 @@
 body {
   margin-top: 7rem;
+  overflow-x:hidden;
 }
 
 .navbar {
@@ -48,16 +49,27 @@ div.dropdown-multicol2>div.dropdown-col{
 #summer h1 {
   font-size: 70pt;
 }
+
 #loggin-btn {
   background-color: #84bc22;
 }
+
 .modal-footer p,
 #passhelp {
   color: #84bc22;
 }
+
 #togglepassword {
   width: 7%;
   position: relative;
   top: -2.25rem;
   right: .75rem;
 }
+
+.services {
+  float: left;
+}
+#servicebg {
+  background-color: #45413e;
+}
+

@@ -32,3 +32,4 @@ $("#togglepassword").click(function visible() {
   });
 
   //password validation
+  
