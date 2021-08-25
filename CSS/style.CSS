@@ -55,4 +55,9 @@ div.dropdown-multicol2>div.dropdown-col{
 #passhelp {
   color: #84bc22;
 }
-
+#togglepassword {
+  width: 7%;
+  position: relative;
+  top: -2.25rem;
+  right: .75rem;
+}
