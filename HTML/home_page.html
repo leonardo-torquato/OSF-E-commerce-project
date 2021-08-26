@@ -22,7 +22,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav mx-auto">
+          <ul class="navbar-nav mx-auto text-center">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 SERVICES
@@ -65,10 +65,7 @@
                   <a class="dropdown-item" href="#">Drink</a>
                   <a class="dropdown-item" href="#">Electronics</a>
                   <a class="dropdown-item" href="#">Flowers & Plant</a>
-                </div>
-                <div class="dropdown-col" style="width: 50%;">
-                  <img src="../midia/minaoculos.png" class="">  
-                </div>
+                </div>            
               </div>
             </li>
             <li class="nav-item">
@@ -80,20 +77,22 @@
             <li class="nav-item">
               <a class="nav-link" href="#">CONTACT US</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"><img src="../midia/search.png"></a>
-            </li>
-            <li class="nav-item">              
-              <button type="button" class="btn nav-link" data-bs-toggle="modal" data-bs-target="#login_form">
-                <img src="../midia/user.png">               
-              </button>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"><img src="../midia/heart.png"></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"><img src="../midia/bag.png"></a>
-            </li>
+            <ul class="nav-bar nav justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link" href="#"><img src="../midia/search.png"></a>
+              </li>
+              <li class="nav-item">              
+                <button type="button" class="btn nav-link" data-bs-toggle="modal" data-bs-target="#login_form">
+                  <img src="../midia/user.png">               
+                </button>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><img src="../midia/heart.png"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><img src="../midia/bag.png"></a>
+              </li>
+            </ul>
           </ul>
         </div>
       </div>
@@ -264,6 +263,7 @@
                 <input class="form-control rounded-pill" id="email" placeholder="example@mail.com">
                 <h2 id="passhelp" class="form-text float-end">forgot password</h2>
               </div>
+
               <div class="form-group">
                 <label for="password">Password</label>
                 <input type="password" class="form-control rounded-pill" id="password" placeholder="@*Aaa123">
@@ -290,27 +290,80 @@
     </div>
     <!--/BANNER-->
 
+    <!--PRODUCTS CAROUSEL-->
+    <!--PRODUCTS CAROUSEL-->
+
     <!--SERVICES-->
     <div id="servicebg" class="d-flex flex-md-row flex-column justify-content-between text-white">
-      <div class="p-5">
-        <img src="../midia/Delivery.png" class="services p-3">
+      <div class="p-md-5 p-sm-3">
+        <img src="../midia/Delivery.png" class="services p-md-3 p-sm-1">
         <h3>FOCUS</h3>
-        <p>Our unwavering focus on superior service delivery and building</p>
+        <p>Our unwavering focus on superior service delivery and building next generation competencies</p>
       </div>
-      <div class="p-5">
-        <img src="../midia/Recycle.png" class="services p-3">
+      <div class="p-md-5 p-sm-3">
+        <img src="../midia/Recycle.png" class="services p-md-3 p-sm-1">
         <h3>METHOD</h3>
-        <p>A standardized methodology designed to deliver measurable busin</p>
+        <p>A standardized methodology designed to deliver measurable business results and predictable costs</p>
       </div>
-      <div class="p-5">
-        <img src="../midia/Clipboard.png" class="services p-3">
+      <div class="p-md-5 p-sm-3">
+        <img src="../midia/Clipboard.png" class="services p-md-3 p-sm-1">
         <h3>KNOWLEDGE</h3>
-        <p>A highly skilled, proactive workforce that reliably improves ea</p>
+        <p>A highly skilled, proactive workforce that reliably improves each client's ROI while mitigating their business risk</p>
       </div>
     </div>
     <!--/SERVICES-->
     
     <!--FOOTER-->
+    <footer class="text-center text-lg-start bg-light text-muted">
+      <div class="container text-center text-md-start pt-3">
+        <div class="row">        
+          <div class="col-12 col-lg-2 mx-auto">
+            <p id="copyright"></p>
+            <h6 class="fw-bold">CONTACT</h6>
+            <p>Headquarters: <br> 5600, Blvd. des Galeries, Bur 530 <br> Québec, Québec G2K 2H6</p>
+            <p><a href="mailto:contact@osf-global.com">contact@osf-global.com</a></p>
+            <p><a href="tel:1-888-548-4344">+1 (888) 548-4344</a></p>
+          </div>
+          <div class="col-12 col-lg-2 mx-auto">
+            <h6 class="fw-bold">CATEGORIES</h6>
+            <p><a href="#">Alcohol</a></p>
+            <p><a href="#">Art</a></p>
+            <p><a href="#">Books</a></p>
+            <p><a href="#">Drink</a></p>
+            <p><a href="#">Electronics</a></p>
+          </div>
+          <div class="col-12 col-lg-2 mx-auto pt-4">
+            <p><a href="#">Home</a></p>
+            <p><a href="#">Jewelry</a></p>
+            <p><a href="#">Kids & Baby</a></p>
+            <p><a href="#">Men's Fashion</a></p>
+            <p><a href="#">Mobile</a></p>
+            <p><a href="#">Motorcycles</a></p>
+            <p><a href="#">Movies</a></p>
+            <p><a href="#">Music</a></p>
+          </div>
+          <div class="col-12 col-lg-2 mx-auto pt-4">
+            <p><a href="#">Sport</a></p>
+            <p><a href="#">Toys</a></p>
+            <p><a href="#">Travel</a></p>
+            <p><a href="#">Women's Fashion</a></p>
+          </div>
+          <div class="col-12 col-lg-2 mx-auto">
+            <h6 class="fw-bold">ABOUT</h6>
+            <p><a href="#">About us</a></p>
+            <p><a href="#">Delivery</a></p>
+            <p><a href="#">Testimonials</a></p>
+            <p><a href="#">Contact</a></p>
+          </div>
+          <div class="col-lg-2 mx-auto d-flex justify-content-between">            
+            <a href="https://www.facebook.com"><img src="../midia/ff.png"></a>
+            <a href="https://myaccount.google.com"><img src="../midia/fg+.png"></a>
+            <a href="https://twitter.com"><img src="../midia/ft.png"></a>
+            <a href="https://pinterest.com"><img src="../midia/fp.png"></a>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!--/FOOTER-->
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>

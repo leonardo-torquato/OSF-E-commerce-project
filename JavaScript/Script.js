@@ -31,5 +31,6 @@ $("#togglepassword").click(function visible() {
     }
   });
 
-  //password validation
+//current year copyright
+$('#copyright').html("<p> &copy; Copyright "+ new Date().getFullYear() + "<br> All Rights Reserved.</p>");
   

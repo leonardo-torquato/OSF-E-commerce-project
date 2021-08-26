@@ -73,3 +73,7 @@ div.dropdown-multicol2>div.dropdown-col{
   background-color: #45413e;
 }
 
+p a {
+  color: grey;
+  text-decoration: none;
+}
