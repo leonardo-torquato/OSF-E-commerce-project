@@ -54,8 +54,7 @@ div.dropdown-multicol2>div.dropdown-col{
   background-color: #84bc22;
 }
 
-.modal-footer p,
-#passhelp {
+.green {
   color: #84bc22;
 }
 
@@ -76,4 +75,13 @@ div.dropdown-multicol2>div.dropdown-col{
 p a {
   color: grey;
   text-decoration: none;
+}
+#oops {
+  font-size: 70pt;
+  font-weight: bolder;
+}
+
+.notfound {
+  background-image: url(../midia/404bg.png); 
+  background-repeat: no-repeat;
 }
