@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/style.CSS">
+    <title>Product Landing Page</title>
+</head>
+<body>
+    <!--NAVIGATION BAR-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-fluid">
+            <div>
+            <a class="navbar-brand" href="home_page.html">
+                <img src="../midia/logo.png" class="d-inline-block">
+                <h1>OSF</h1>
+                </h1>
+            </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mx-auto text-center">
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="404.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    SERVICES
+                </a>
+                <div class="dropdown-menu dropdown-multicol2 p-3" aria-labelledby="dropdownMenuButton">
+                    <div class="dropdown-col">
+                    <h3>PRODUCT CATEGORIES</h3>
+                    <a class="dropdown-item" href="404.html">Accessories</a>
+                    <a class="dropdown-item" href="404.html">Alcohol</a>
+                    <a class="dropdown-item" href="404.html">Art</a>
+                    <a class="dropdown-item" href="404.html">Books</a>
+                    <a class="dropdown-item" href="404.html">Drink</a>
+                    <a class="dropdown-item" href="404.html">Electronics</a>
+                    <a class="dropdown-item" href="404.html">Flowers & Plant</a>
+                    </div>
+                    <div class="dropdown-col"> 
+                    <a class="dropdown-item" href="404.html">Gadgets</a>
+                    <a class="dropdown-item" href="404.html">Garden</a>
+                    <a class="dropdown-item" href="404.html">Grocery</a>
+                    <a class="dropdown-item" href="404.html">Home</a>
+                    <a class="dropdown-item" href="404.html">Jewelry</a>
+                    <a class="dropdown-item" href="404.html">Kids & Baby</a>
+                    <a class="dropdown-item" href="404.html">Men's Fashion</a>
+                    </div>
+                    <div class="dropdown-col">
+                    <a class="dropdown-item" href="404.html">Motorcycles</a>
+                    <a class="dropdown-item" href="404.html">Movies</a>
+                    <a class="dropdown-item" href="404.html">Music</a>
+                    <a class="dropdown-item" href="404.html">Office</a>
+                    <a class="dropdown-item" href="404.html">Pets</a>
+                    <a class="dropdown-item" href="404.html">Romantic</a>
+                    <a class="dropdown-item" href="404.html">Sports</a>
+                    </div>
+                    <div class="dropdown-col">
+                    <h3>SALES</h3>
+                    <a class="dropdown-item" href="404.html">Accessories</a>
+                    <a class="dropdown-item" href="404.html">Alcohol</a>
+                    <a class="dropdown-item" href="404.html">Art</a>
+                    <a class="dropdown-item" href="404.html">Books</a>
+                    <a class="dropdown-item" href="404.html">Drink</a>
+                    <a class="dropdown-item" href="404.html">Electronics</a>
+                    <a class="dropdown-item" href="404.html">Flowers & Plant</a>
+                    </div>            
+                </div>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="404.html">COMPANY</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="404.html">LIBRARY</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="404.html">CONTACT US</a>
+                </li>
+                <ul class="nav-bar nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="404.html"><img src="../midia/search.png"></a>
+                </li>
+                <li class="nav-item">              
+                    <button type="button" class="btn nav-link" data-bs-toggle="modal" data-bs-target="#login_form">
+                    <img src="../midia/user.png">               
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="404.html"><img src="../midia/heart.png"></a>
+                </li>
+                <li class="nav-item cart">
+                    <a class="nav-link" href="cart_page.html"><img src="../midia/bag.png"><span>0</span></a>
+                </li>
+                </ul>
+            </ul>
+            </div>
+        </div>
+    </nav>
+    <!--/NAVIGATION BAR-->
+
+    <!--MODAL FORM-->
+    <div class="modal fade" id="login_form" tabindex="-1" aria-labelledby="login_form" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title mx-auto" id="login_form">Sign in</h5>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input class="form-control rounded-pill" id="email" placeholder="example@mail.com">
+                        <h2 class="form-text float-end green">forgot password</h2>
+                        </div>
+        
+                        <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control rounded-pill" id="password" placeholder="@*Aaa123">
+                        <img id="togglepassword" class="float-end" role="button" src="../midia/visibility.png">
+                        </div>
+                        <p id="validationcheck"></p>            
+                    </form>
+                </div>
+                <div class="modal-footer d-block text-center">
+                    <button id="loggin-btn" type="submit" class="btn rounded-pill col-6">LOGIN</button>
+                    <p class="green">I don't have an account</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/MODAL FORM-->
+
+
+    <!--PICTURES-->
+    <div class="container d-flex justify-content-center flex-column flex-md-row col-md-4"> 
+        <div class="mx-auto my-auto">
+            <img class="rounded" id="expandedImg" src="../midia/cardigan1.jpg">
+        </div>
+        <div class="mx-auto my-auto d-flex flex-row flex-md-column">
+            <img src="../midia/cardigan1_small.jpg" id="1" class="imgs m-1 rounded">
+            <img src="../midia/cardigan2_small.jpg" id="2" class="imgs m-1 rounded">
+            <img src="../midia/cardigan3_small.jpg" id="3" class="imgs m-1 rounded">
+            <img src="../midia/cardigan4_small.jpg" id="4" class="imgs m-1 rounded">
+        </div>
+        <div class="row col-12 mx-5">
+            <h1 class="text-center">$ 299.99</h1>
+            <select id="choosecolor" class="custom-select rounded-pill p-2">
+                <option selected>Dark Grey</option>
+                <option>Blue</option>
+                <option>Red</option>
+                <option>Maroon</option>
+            </select>
+            <div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum turpis in odio ornare, a mollis enim bibendum. Sed luctus feugiat tortor, et convallis diam ultrices eu. Fusce molestie urna ut nisl vulputate, eu eleifend massa iaculis. Morbi quis hendrerit mauris. Sed purus magna, porttitor eu nulla eu, placerat elementum arcu.</p>
+        </div>
+    </div>
+    <!--/PICTURES-->
+
+    <!--FOOTER-->
+    <footer class="text-center text-lg-start bg-light text-muted">
+    <div class="container text-center text-md-start pt-3">
+        <div class="row">        
+        <div class="col-12 col-lg-2 mx-auto">
+            <p id="copyright"></p>
+            <h6 class="fw-bold">CONTACT</h6>
+            <p>Headquarters: <br> 5600, Blvd. des Galeries, Bur 530 <br> Québec, Québec G2K 2H6</p>
+            <p><a href="mailto:contact@osf-global.com">contact@osf-global.com</a></p>
+            <p><a href="tel:1-888-548-4344">+1 (888) 548-4344</a></p>
+        </div>
+        <div class="col-12 col-lg-2 mx-auto">
+            <h6 class="fw-bold">CATEGORIES</h6>
+            <p><a href="404.html">Alcohol</a></p>
+            <p><a href="404.html">Art</a></p>
+            <p><a href="404.html">Books</a></p>
+            <p><a href="404.html">Drink</a></p>
+            <p><a href="404.html">Electronics</a></p>
+        </div>
+        <div class="col-12 col-lg-2 mx-auto pt-4">
+            <p><a href="404.html">Home</a></p>
+            <p><a href="404.html">Jewelry</a></p>
+            <p><a href="404.html">Kids & Baby</a></p>
+            <p><a href="404.html">Men's Fashion</a></p>
+            <p><a href="404.html">Mobile</a></p>
+            <p><a href="404.html">Motorcycles</a></p>
+            <p><a href="404.html">Movies</a></p>
+            <p><a href="404.html">Music</a></p>
+        </div>
+        <div class="col-12 col-lg-2 mx-auto pt-4">
+            <p><a href="404.html">Sport</a></p>
+            <p><a href="404.html">Toys</a></p>
+            <p><a href="404.html">Travel</a></p>
+            <p><a href="404.html">Women's Fashion</a></p>
+        </div>
+        <div class="col-12 col-lg-2 mx-auto">
+            <h6 class="fw-bold">ABOUT</h6>
+            <p><a href="404.html">About us</a></p>
+            <p><a href="404.html">Delivery</a></p>
+            <p><a href="404.html">Testimonials</a></p>
+            <p><a href="404.html">Contact</a></p>
+        </div>
+        <div class="col-lg-2 mx-auto d-flex justify-content-between icons">            
+            <a href="https://www.facebook.com"><img src="../midia/ff.png"></a>
+            <a href="https://myaccount.google.com"><img src="../midia/fg+.png"></a>
+            <a href="https://twitter.com"><img src="../midia/ft.png"></a>
+            <a href="https://pinterest.com"><img src="../midia/fp.png"></a>
+        </div>
+        </div>
+    </div>
+    </footer>
+    <!--/FOOTER-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="../JavaScript/Script.js"></script>
+</body>
+</html>

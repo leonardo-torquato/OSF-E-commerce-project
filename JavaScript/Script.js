@@ -3,6 +3,7 @@ function validateEmail(email) {
   const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(email);
 }
+
 function validate() {
   const $result = $("#validationcheck");
   const email = $("#email").val();
@@ -33,4 +34,147 @@ $("#togglepassword").click(function visible() {
 
 //current year copyright
 $('#copyright').html("<p> &copy; Copyright "+ new Date().getFullYear() + "<br> All Rights Reserved.</p>");
-  
+
+//change images on product landing page
+$(".imgs").on("click", function swap() {
+  var picNumber = $(this).attr("id");
+  document.getElementById("expandedImg").src=`../midia/cardigan${picNumber}.jpg`;
+});
+
+//shopping cart
+let carts = document.querySelectorAll('.add-cart');
+let products = [
+  {
+    name: "Kristina Dam Oak Table With",
+    tag: "product1",
+    price: 799.5,
+    inCart: 0,
+  },
+  {
+    name: "Hay - About A Lounge Chair AAL",
+    tag: "product2",
+    price: 659.5,
+    inCart: 0,
+  },
+  {
+    name: "Active Facial Mask and Charcoal",
+    tag: "product3",
+    price: 129.5,
+    inCart: 0,
+  },
+  {
+    name: "Cocktail Table Walnut | YES",
+    tag: "product4",
+    price: 299.9,
+    inCart: 0,
+  },
+  {
+    name: "Hay - About A Lounge Chair AAL",
+    tag: "product5",
+    price: 659.5,
+    inCart: 0,
+  },
+  {
+    name: "TORY DESK CALENDAR",
+    tag: "product6",
+    price: 410.9,
+    inCart: 0,
+  },
+  {
+    name: "CH445 Wing Chair SUITE NY",
+    tag: "product7",
+    price: 330.5,
+    inCart: 0,
+  }
+]
+
+for (let i=0; i < carts.length; i++) {
+  carts[i].addEventListener('click', () => {
+    cartNumbers(products[i]);
+    totalCost(products[i]);
+  })
+}
+
+function onLoadCartNumbers() {
+  let productNumbers = localStorage.getItem('cartNumbers');
+  if (productNumbers) {
+    document.querySelector('.cart span').textContent = productNumbers;
+  }
+}
+
+function cartNumbers(product) {
+  let productNumbers = localStorage.getItem('cartNumbers');
+  productNumbers = Number(productNumbers);
+  if(productNumbers) {
+    localStorage.setItem('cartNumbers', productNumbers + 1);
+    document.querySelector('.cart span').textContent = productNumbers + 1;
+  } else {
+    localStorage.setItem('cartNumbers', 1);
+    document.querySelector('.cart span').textContent = 1;
+  }
+  setItems(product);
+}
+
+function setItems(product) {
+  let cartItems = localStorage.getItem('productsInCart');
+  cartItems = JSON.parse(cartItems);
+  if (cartItems != null) {
+    if (cartItems[product.tag] == undefined) {
+      cartItems = {
+        ...cartItems,
+        [product.tag]: product
+      }
+    }
+    cartItems[product.tag].inCart += 1;
+  } else {
+      product.inCart = 1;
+      cartItems = {
+        [product.tag]: product
+    }
+  }
+  localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+}
+
+function totalCost(product) {
+  let cartCost = localStorage.getItem("totalCost");
+
+  if (cartCost != null) {
+    cartCost = Number(cartCost);
+    localStorage.setItem("totalCost", cartCost + product.price)    
+  } else {
+    localStorage.setItem("totalCost", product.price);
+  }
+}
+
+function displayCart() {
+  let cartItems = localStorage.getItem("productsInCart");
+  cartItems = JSON.parse(cartItems);
+  let productContainer = document.querySelector(".products");
+  let cartCost = localStorage.getItem("totalCost");
+
+  if (cartItems && productContainer) {
+    productContainer.innerHTML = '';
+    Object.values(cartItems).map(item => {
+      productContainer.innerHTML += `
+      <div class="product d-flex column justify-content-between my-3 mx-3 border-bottom">
+        <img class="img-fluid" style="max-width: 10%; height: auto;" src="../midia/${item.tag}.png">
+        <div>
+          <h3>${item.name}</h3>
+          <p>${item.price}</p>
+        </div>
+        <h5><button class="btn border-secondary"><a>-</a></button> <span class="mx-2">${item.inCart}</span> <button class="btn border-secondary"><a>+</a></button></h5>
+        <h5>${item.inCart * item.price}</h5>
+      </div>
+      `
+    });
+    productContainer.innerHTML += `
+    <div class="product d-flex column justify-content-between my-3 mx-3 border-bottom">
+    <p>total cost:</p>
+    <h3>${cartCost}</h3>
+    </div>
+    `
+  }
+}
+
+onLoadCartNumbers();
+displayCart();

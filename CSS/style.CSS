@@ -54,7 +54,8 @@ div.dropdown-multicol2>div.dropdown-col{
   background-color: #84bc22;
 }
 
-.green {
+.green,
+span {
   color: #84bc22;
 }
 
@@ -84,4 +85,17 @@ p a {
 .notfound {
   background-image: url(../midia/404bg.png); 
   background-repeat: no-repeat;
+}
+.icons {
+  height: fit-content;
+}
+a {
+  text-decoration: none;
+}
+.border-secondary a {
+  color: #262a32;
+}
+#choosecolor {
+  height: fit-content; 
+  width: fit-content;
 }
