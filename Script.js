@@ -38,7 +38,7 @@ $('#copyright').html("<p> &copy; Copyright "+ new Date().getFullYear() + "<br> A
 //change images on product landing page
 $(".imgs").on("click", function swap() {
   var picNumber = $(this).attr("id");
-  document.getElementById("expandedImg").src=`../midia/cardigan${picNumber}.jpg`;
+  document.getElementById("expandedImg").src=`cardigan${picNumber}.jpg`;
 });
 
 //shopping cart
@@ -159,7 +159,7 @@ function displayCart() {
       <div class="product d-flex column my-3 mx-3 border-bottom justify-content-around">
 
         <div class="product d-flex column col-3">          
-          <img class="img-fluid" style="max-width: 25%;" src="../midia/${item.tag}.png">
+          <img class="img-fluid" style="max-width: 25%;" src="${item.tag}.png">
           <h3>${item.name}</h3>
         </div>
 
