@@ -99,3 +99,11 @@ a {
   height: fit-content; 
   width: fit-content;
 }
+#nav-tab .active,
+#nav-tabContent .active {
+  background:#212529;
+  color: white;
+}
+#tabs {
+  margin-bottom: -3rem;
+}

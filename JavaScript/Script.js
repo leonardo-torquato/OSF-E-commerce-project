@@ -156,21 +156,32 @@ function displayCart() {
     productContainer.innerHTML = '';
     Object.values(cartItems).map(item => {
       productContainer.innerHTML += `
-      <div class="product d-flex column justify-content-between my-3 mx-3 border-bottom">
-        <img class="img-fluid" style="max-width: 10%; height: auto;" src="../midia/${item.tag}.png">
-        <div>
+      <div class="product d-flex column my-3 mx-3 border-bottom justify-content-around">
+
+        <div class="product d-flex column col-3">          
+          <img class="img-fluid" style="max-width: 25%;" src="../midia/${item.tag}.png">
           <h3>${item.name}</h3>
-          <p>${item.price}</p>
         </div>
-        <h5><button class="btn border-secondary"><a>-</a></button> <span class="mx-2">${item.inCart}</span> <button class="btn border-secondary"><a>+</a></button></h5>
-        <h5>${item.inCart * item.price}</h5>
+
+        <div class="price col-3">
+          <p>$${item.price}</p>
+        </div>
+
+        <div class="d-flex column">
+          <span class="mx-2">${item.inCart}</span>          
+        </div>
+
+        <div>
+          <h5>$${item.inCart * item.price}</h5>
+        </div>
+
       </div>
       `
     });
     productContainer.innerHTML += `
     <div class="product d-flex column justify-content-between my-3 mx-3 border-bottom">
-    <p>total cost:</p>
-    <h3>${cartCost}</h3>
+      <p>total cost:</p>
+      <h3>$${cartCost}</h3>
     </div>
     `
   }
